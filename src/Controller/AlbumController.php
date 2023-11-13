@@ -14,7 +14,8 @@ class AlbumController extends AbstractController
      */
     public function listeAlbums(AlbumRepository $repo): Response
     {
-        $albums=$repo->findAll();
+        // $albums=$repo->findAll();
+        $albums=$repo->findBy(['date' => 2006],['nom' => 'asc'],5);
         return $this->render('album/listeAlbums.html.twig', [
             // 'controller_name' => 'AlbumController',
             'lesAlbums' => $albums
