@@ -45,7 +45,7 @@ class Artiste
     private $type;
 
     /**
-     * @ORM\OneToMany(targetEntity=Album::class, mappedBy="Artiste")
+     * @ORM\OneToMany(targetEntity=Album::class, mappedBy="artiste")
      */
     private $albums;
 

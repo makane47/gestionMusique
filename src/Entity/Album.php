@@ -38,7 +38,7 @@ class Album
      * @ORM\ManyToOne(targetEntity=Artiste::class, inversedBy="albums")
      * @ORM\JoinColumn(nullable=false)
      */
-    private $Artiste;
+    private $artiste;
 
     /**
      * @ORM\OneToMany(targetEntity=Morceau::class, mappedBy="album")
@@ -106,12 +106,12 @@ class Album
 
     public function getArtiste(): ?Artiste
     {
-        return $this->Artiste;
+        return $this->artiste;
     }
 
-    public function setArtiste(?Artiste $Artiste): self
+    public function setArtiste(?Artiste $artiste): self
     {
-        $this->Artiste = $Artiste;
+        $this->artiste = $artiste;
 
         return $this;
     }
